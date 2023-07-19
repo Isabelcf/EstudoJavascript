@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação Botão</title>
+</head>
+<!--O marcador <STYLE></STYLE> "Style Element" ou estilo é utilizado para 
+    transferir informações de formatação para tags, para conteúdos, dentro
+     das tags de uma página HTML.-->
+
+     <!--A propriedade font-family do CSS permite que se faça uma lista de 
+        prioridades de familias de fontes e/ou nomes genéricos de famílias
+         a serem especificados para um elemento selecionado.-->
+
+    <!--A propriedade CSS font-weight especifica o peso ou a intensidade da
+         fonte (ex.: negrito). Algumas fontes oferecem apenas as opções
+          normal e negrito.-->
+
+    <!--Font-size - Através do font-size você pode regular o tamanho da fonte.
+         As medidas adotados podem ser qualquer uma utilizada no css (px, em, %...).
+          Font-family - O font-family define qual família de fonte você vai usar.
+           O ideal é trabalhar com fontes conhecidas como Arial, Helvetica, 
+           Tahoma e etc.-->
+
+    <!--A propriedade color do CSS definine o valor da cor de um elemento com seu 
+        conteúdo em texto e seus decorações (estilos)-->
+
+    <!--CSS padding: a distância entre o elemento e as bordas da página! O CSS 
+        padding faz parte do conjunto de propriedades da linguagem de estilo CSS 
+        utilizada para definir o espaçamento ao redor de um elemento.-->
+
+    <!--background-color
+        Utilizamos essa propriedade para alterar a cor do plano de fundo, seja de um elemento
+         ou do documento como um todo. Para isso, basta atribuir a cor desejada à propriedade 
+        background-color, declarada dentro do seletor no qual ela deve ser aplicada.-->
+
+    <!--A propriedade CSS3 border-radius destina-se a definir bordas arredondadas. O arredondamento
+         das bordas é feito com declaração de dois valores CSS de medida; o primeiro define o eixo
+          horizontal (rx) de 1/4 de uma elipse e o segundo o eixo vertical (ry)-->
+    
+<style>
+    h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 15pt;
+        color: rgb(56, 56, 56);
+    }
+
+    button {
+        font-size: 12pt;
+        padding: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-color: green;
+        border-radius: 15px;
+
+    }
+
+</style>
+<body>
+    <h1>Integindo com o botão</h1> <!--O H1 é a abreviação do termo em inglês de 
+        Header 1, que significa Cabeçalho 1, logo, sendo este o mais importante, 
+        dessa forma o H1 possui maior destaque, uma fonte maior, e geralmente ele 
+        é o elemento de texto mais visível na página de um site.-->
+    <button onclick="clicou()">CLIQUE AQUI</button>
+
+    <script>
+        /*Uma função é um procedimento de JavaScript - um conjunto de instruções 
+        que executa uma tarefa ou calcula um valor. Para usar uma função, você
+         deve defini-la em algum lugar no escopo do qual você quiser chamá-la.*/
+        function clicou() {
+            window.alert('você clicou no botão!')
+        }
+    </script>
+</body>
+</html>
