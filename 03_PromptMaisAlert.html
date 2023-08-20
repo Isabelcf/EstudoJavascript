@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com dados</title>
+</head>
+<style>
+header {
+    width: 1200px;
+    align-items: center;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+    align-items: center;
+}
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20pt;
+        font-weight: bolder;
+        color: gray;
+        align-items: center;
+    }
+
+
+
+    button {
+        font-size: 12pt;
+        padding: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-color: green;
+        border-radius: 15px;
+        align-items: center;
+    }
+</style>
+<header>
+    <h1>Trabalhando com dados v1.0</h1>
+</header>
+<body>
+    <nav><button onclick="clicou()">click here</button>
+    </nav>
+
+    <Script>
+        function clicou() { /*O Window. prompt() exibe uma caixa de 
+            diálogo com uma mensagem opcional solicitando ao usuário a entrada de algum texto.*/
+
+            /*Guardar uma variável e usar dentro da resposta do prompt é uma possibilidade como
+            no exemplo abaixo*/
+            var nome = window.prompt("What's you name?")
+            window.alert(`Nice to meet you ${nome}`)
+        }
+    </Script>
+</body>
+</html>
