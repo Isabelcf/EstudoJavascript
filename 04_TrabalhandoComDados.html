@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header {
+        width: 1200px;
+        align-items: center;
+    }
+    
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px;
+        align-items: center;
+    }
+    
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            font-weight: bolder;
+            color: gray;
+            align-items: center;
+        }
+    
+    
+    
+        button {
+            font-size: 12pt;
+            padding: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            background-color: green;
+            border-radius: 15px;
+            align-items: center;
+        }
+    </style>
+    <header>
+        <h1>Trabalhando com Dados</h1>
+    </header>
+<body>
+    <nav><button onclick="clicou()">click to go</button></nav>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado</p>
+    </section>
+    <script>
+        function clicou() {
+                   var nome = window.prompt("What's' you name?") 
+                   //Retorna a referência do elemento através do seu ID
+                   var res = window.document.getElementById('resultado')
+                   //também funciona com o comando abaixo
+                   // var res = window.document.querySelector('section#resultado'
+                   res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer!`
+                    /*O innerHTML pode ser usado para receber o conteúdo de um elemento HTML ou 
+                    para definir um novo conteúdo para ele. Para isso, podemos utilizar a 
+                    sintaxe do DOM (document. getElement)*/
+                   
+
+        }
+    </script>
+</body>
+</html>
