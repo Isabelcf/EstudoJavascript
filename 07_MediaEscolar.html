@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Escolar</title>
+    <style>
+        body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px;
+        align-items: center;
+    }
+    h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            font-weight: bolder;
+            color: gray;
+            align-items: center;
+        }
+
+    p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            font-weight: bolder;
+            color: gray;
+            align-items: center;
+        }
+    
+    button {
+            font-size: 12pt;
+            padding: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            background-color: green;
+            border-radius: 15px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v1</h1>
+    <button onclick="media()">Calcular média</button>
+    <section id="resultado">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+
+    <script>
+
+        function media() {
+            let nome = window.prompt('Qual é o nome do aluno?') //Aqui devemos guardar o nome do aluno. (String)
+            let n1 = Number(window.prompt('Qual foi sua primeira nota?')) /*Esse number englobando o window.prompt serve para indicar que está parte é
+            para ser interpretada como número*/
+            let n2 = Number(window.prompt('Qual foi sua segunda nota?'))
+            med = (n1 + n2)/2 // essa é a função responsável por fazer o cálculo
+
+            let res = document.getElementById('resultado')
+            res.innerHTML = `<p>Calculando a média final de <mark>${nome}</mark></p>`
+            res.innerHTML = `<p>As notas obtidas foram <mark>${n1} e ${n2}</mark></p>`
+            res.innerHTML = `<pA média final será <mark>${med}</mark>.</p>`
+        }
+    </script>
+</body>
+</html>

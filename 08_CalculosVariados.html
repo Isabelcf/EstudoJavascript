@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos váriados</title>
+    <style>
+         body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px;
+        align-items: center;
+    }
+    h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            font-weight: bolder;
+            color: gray;
+            align-items: center;
+        }
+
+    p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            font-weight: bolder;
+            color: gray;
+            align-items: center;
+        }
+    
+    button {
+            font-size: 12pt;
+            padding: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            background-color: green;
+            border-radius: 15px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculos váriados</h1>
+    <button onclick="calcular()" >Clique para calcular</button>
+
+    <section id="result">
+        <p>O resultado vai sair aqui...</p>
+    </section>
+
+    <script>
+
+        function calcular() {
+           let numero = Number(window.prompt('Digite um número: '))
+
+           let res = document.querySelector('section#result')
+           res.innerHTML = `<p>O número a ser analisado será o <strong>${numero}</strong></p>`
+           res.innerHTML += `<p>O valor absoluto é ${Math.abs(numero)}</p>` /*MÉTODOS DO OBJETO MATH. ABS: Este método tem a função de 
+           retornar o valor absoluto de um número, isto significa que o retorno será sempre positivo. Caso seja informado um valor
+            negativo à este método., ele retornará o mesmo como positivo. Por exemplo, caso utilizemos o valor -1234, ele será convertido para 1234.*/
+           res.innerHTML += `<p>A sua parte inteira é ${Math.trunc(numero)}</p>` //trunc() retorna a parte inteira de um número, descartando suas casas decimais.
+           res.innerHTML += `<p>O valor inteiro mais próximo é ${Math.round(numero)}</p>` //A função Math. round() retorna o valor de um número arredondado para o inteiro mais proximo.
+           res.innerHTML += `<p>A raiz quadrada é ${Math.sqrt(numero)}</p>` //Valor retornado, a raiz quadrada do número recebido.
+           res.innerHTML += `<p>A sua raiz cúbica é ${Math.cbrt(numero)}</p>` //Math.cbrt(x), Retorna a raiz cúbica de um número (x3)
+           res.innerHTML += `<p>O valor de ${numero}<sup>2</sup> é ${Math.pow(num, 2)}</p>` //A função Math. pow() retorna a base elevada ao expoente power, ou seja, baseexpoente
+           res.innerHTML += `<p>O valor de ${numero}<sup>3</sup> é ${Math.pow(num, 3)}</p>`
+
+
+        }
+    </script>
+</body>
+</html>
