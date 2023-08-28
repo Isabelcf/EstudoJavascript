@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap'); /*A diretriz @import carrega um arquivo externo para dentro do CSS, 
+e pode definir condições específicas quanto às dimensões e o substrato onde o documento HTML está sendo exibido para que isso aconteça*/
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+    align-items: center;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: bolder;
+    color: gray;
+    align-items: center;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: bolder;
+    color: gray;
+    align-items: center;
+}
+
+button {
+    font-size: 12pt;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: green;
+    border-radius: 15px;
+    align-items: center;
+}
