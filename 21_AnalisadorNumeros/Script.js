@@ -19,7 +19,7 @@ function inlista(n, l) {
 }
 
 function adicionar() {
-    if(isNumero(num.value) && !inlista(num.value, valores)) {
+    if(isNumero(num.value) && inlista(num.value, valores)) {
         valores.push(Number(num.value))
         var item = document.createElement('option')
         item.text = `Valor ${num.value} adicionado.`
@@ -52,7 +52,7 @@ function finalizar() {
         res.innerHTML += `<P>Ao todo, temos ${tot} números cadastrados.</P>`
         res.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
         res.innerHTML += `<p>O menor valor informado foi ${menor} </p>`
-        res.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
+       // res.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
 
 
     }
