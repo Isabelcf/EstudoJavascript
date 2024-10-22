@@ -56,4 +56,22 @@ body {
     background-color: #100027;
     color: #7E73CB;
     cursor: pointer;
+    transition: background-color .2s ease-in;
+}
+
+#botoesAcao button:hover {
+    background-color:#5600D7;
+}
+
+#listamarcacao {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    color: #100027;
+
+}
+
+#listamarcacao p:first-child {
+    margin-top: 1.5rem;
+
 }
