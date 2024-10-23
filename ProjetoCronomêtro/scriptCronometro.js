@@ -15,6 +15,17 @@ const formatTime = (time) => {
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${hundredths.toString().padStart(2, '0')}`
 }
 
+
+const markTime = () => {
+    marcacao.push(timer)
+    addMarkToList(marcacao.length, timer)
+}
+
+const addMarkToList = (markIndex, markTime) => {
+    marca.innerHTML += `<p>Marca ${markIndex}: ${formatTime(markTime)}</p>`
+}
+
+
 const toggleTimer = () => {
     const button = document.getElementById('StartPause');
     const action = button.getAttribute('action');
@@ -36,8 +47,22 @@ const toggleTimer = () => {
 
 }
 
+const resetTimer = () => {
+    clearInterval(intervaloID);
+    timer = 0;
+    marcacao = 0;
+    setTimer(timer);
+    listamarcacao.innerHTML = '';
+    const button = document.getElementById('StartPause');
+    button.setAttribute('action', 'start');
+    button.innerHTML = '<span class="material-icons">play_arrow</span>';
+
+}
+
 const setTimer = (timeValue) => {
     tempo.innerText = formatTime(timeValue);
 }
 
 document.getElementById('StartPause').addEventListener('click', toggleTimer);
+document.getElementById('marcacao').addEventListener('click', markTime);
+document.getElementById('reset').addEventListener('click', resetTimer);
